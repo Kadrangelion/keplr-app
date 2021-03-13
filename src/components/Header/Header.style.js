@@ -13,3 +13,8 @@ export const HeaderContainer = styled.div`
 
 export const HeaderTitle = styled.h2`
 `;
+
+export const HeaderReturn = styled.div`
+  display: flex;
+  align-items: center;
+`;
