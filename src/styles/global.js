@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  body {
+  * {
     font-family:'Roboto';
+  }
+  body {
     background: ${({ theme }) => theme.body};
     transition: background 1s;
   }

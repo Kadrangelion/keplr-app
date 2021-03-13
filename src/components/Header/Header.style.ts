@@ -11,10 +11,9 @@ export const HeaderContainer = styled.div`
   color: white;
 `;
 
-export const HeaderTitle = styled.h2`
-`;
-
 export const HeaderReturn = styled.div`
   display: flex;
+  width: 24px;
   align-items: center;
+  cursor: pointer;
 `;

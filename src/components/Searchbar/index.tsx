@@ -19,11 +19,16 @@ const SearchBar: React.FC<SearchBarProps> = ({defaultValue = '', onSearch, label
    */
   useEffect(
     () => {
-      if (debouncedValue) {
-        onSearch(debouncedValue);
-      } 
+      if (value === '') {
+        onSearch('');
+      } else {
+        if (debouncedValue) {
+          onSearch(debouncedValue);
+        }
+      }
     },
-    [debouncedValue, onSearch]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [debouncedValue, value]
   );
 
   return (

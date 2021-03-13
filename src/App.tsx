@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme';
 import { GlobalStyles } from './styles/global';
-import { Header, Loader } from './components';
-import { Movie, Home} from './pages';
+import { Header } from './components';
+import { Movie, Home } from './pages';
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
     setTheme(mode)
   };
 
-  
   const toggleTheme = () => {
     if (theme === 'light') {
       setMode('dark');
@@ -28,7 +27,6 @@ function App() {
     }
   };
 
-  // We will
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
     if (localTheme) {
@@ -40,7 +38,7 @@ function App() {
   }, []);
 
   if (!componentMounted) {
-    return <Loader isLoading={true} />
+    return <div />
   };
 
   return (
