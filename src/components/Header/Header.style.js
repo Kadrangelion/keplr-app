@@ -7,6 +7,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${({ theme }) => theme.header};
+  transition: background 1s;
 `;
 
 export const HeaderTitle = styled.h2`
