@@ -29,7 +29,7 @@ const SearchBar: React.FC<SearchBarProps> = ({defaultValue = '', onSearch, label
   return (
     <InputContainer>
       <StyledInput type='text' placeholder={label} value={value} onChange={event => setValue(event.target.value)} />
-      {clearable &&
+      {clearable && value!=='' &&
         <InputClearIcon onClick={() => setValue(defaultValue)}>
           <span className="material-icons">
             clear

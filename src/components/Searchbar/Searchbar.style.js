@@ -21,7 +21,7 @@ export const InputContainer = styled.div`
 `;
 
 export const InputClearIcon = styled.div`
-  flex: 0 0;
+  margin-top: 2px;
   &:hover{
     cursor:pointer;
   }
