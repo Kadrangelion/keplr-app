@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CheckBoxWrapper, CheckBox, CheckBoxLabel, SwitchContainer } from './Switch.style';
+
 type SwitchProps = {
   onClick: Function;
   defaultValue?: boolean;
@@ -24,7 +25,7 @@ const Switch: React.FC<SwitchProps> = ({ onClick, defaultValue = false, leftLabe
     <SwitchContainer >
       {leftLabel}
       <CheckBoxWrapper >
-        <CheckBox id="checkbox" type="checkbox" checked={checked} onClick={()=>handleClick()}/>
+        <CheckBox id="checkbox" type="checkbox" checked={checked} onChange={()=>handleClick()}/>
         <CheckBoxLabel htmlFor="checkbox" />
       </CheckBoxWrapper>
       {rightLabel}

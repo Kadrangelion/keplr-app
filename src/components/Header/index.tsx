@@ -14,8 +14,9 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
   const location = useLocation();
   return (
     <HeaderContainer>
-      {/* Check if we are on Home if not display a back button else en empty div to keep flexbox with 3 elements */}
       <HeaderReturn>
+        {/* Check if we are on Home if not display a back button else nothing. 
+        Test is placed inside div to keep flexbox with 3 elements in all cases */}
         {location.pathname !== '/' && 
           <span onClick={() => history.goBack()} className="material-icons">
             arrow_back_ios
