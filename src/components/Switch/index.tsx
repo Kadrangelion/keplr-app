@@ -1,17 +1,33 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { CheckBoxWrapper, CheckBox, CheckBoxLabel, SwitchContainer } from './Switch.style';
 type SwitchProps = {
-  toggleTheme: Function;
-  leftLabel: string;
-  rightLabel: string;
+  onClick: Function;
+  defaultValue?: boolean;
+  leftLabel: React.ReactNode;
+  rightLabel: React.ReactNode;
 }
 
-const Switch: React.FC<SwitchProps> = ({ toggleTheme, leftLabel, rightLabel}) => {
+/**
+ * For this component to be reusable in other cases than Header we decided to set the leftLabel & RightLabel props
+ * As React components so we can further pass either icons,text or others when needed ...
+ */
+const Switch: React.FC<SwitchProps> = ({ onClick, defaultValue = false, leftLabel, rightLabel}) => {
+  const [checked, setChecked] = useState(defaultValue);
+
+  const handleClick = () => {
+    setChecked(!checked);
+    onClick();
+  }
 
   return (
-    <div onClick={()=>toggleTheme()}>
-      Switch
-    </div>
+    <SwitchContainer >
+      {leftLabel}
+      <CheckBoxWrapper >
+        <CheckBox id="checkbox" type="checkbox" checked={checked} onClick={()=>handleClick()}/>
+        <CheckBoxLabel htmlFor="checkbox" />
+      </CheckBoxWrapper>
+      {rightLabel}
+    </SwitchContainer>
   )
 }
 

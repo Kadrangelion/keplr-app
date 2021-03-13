@@ -8,8 +8,8 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   background: ${({ theme }) => theme.header};
   transition: background 1s;
+  color: white;
 `;
 
 export const HeaderTitle = styled.h2`
-  color: white;
 `;

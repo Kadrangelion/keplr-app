@@ -27,7 +27,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <Header toggleTheme={toggleTheme}/>
+      <Header isDarkMode={theme==='dark'} toggleTheme={toggleTheme}/>
       <Switch>
         <Route path="/film/:id" exact><Movie /></Route>
         <Route path="/"><Home /></Route>
