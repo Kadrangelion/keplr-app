@@ -17,3 +17,8 @@ export const HeaderReturn = styled.div`
   align-items: center;
   cursor: pointer;
 `;
+
+export const HeaderTitle = styled.h2`
+  font-size: 18px;
+  font-weigth: bold;
+`;

@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { AxiosResponse } from 'axios';
 import { IFilm, ITMDbFilmsResponse } from '../../models';
 import { Searchbar } from '../../components';
-import { FilmCardContainer, Tooltip, FilmCard } from './Home.style';
-import { PageContainer, Poster } from '../../styles/global';
 import { TMDb } from '../../services';
-import { AxiosResponse } from 'axios';
+import { PageContainer, Poster } from '../../styles/global';
+import { FilmCardContainer, Tooltip, FilmCard } from './Home.style';
 
 const Home= () => {
   const history = useHistory();

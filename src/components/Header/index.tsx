@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import Switch from '../Switch';
-import { HeaderContainer, HeaderReturn } from './Header.style';
+import { HeaderContainer, HeaderReturn, HeaderTitle } from './Header.style';
 
 type HeaderProps = {
   toggleTheme: Function;
@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
           </span>
         }
       </HeaderReturn>
-      <h2>Movies</h2>
+      <HeaderTitle>Movies</HeaderTitle>
       <Switch
         onClick={toggleTheme}
         defaultValue={isDarkMode}

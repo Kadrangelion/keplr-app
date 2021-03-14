@@ -4,6 +4,13 @@ import { medias } from './medias';
 export const GlobalStyles = createGlobalStyle`
   * {
     font-family:'Roboto';
+    font-size: 14px;
+    @media ${medias.tablet} {
+      font-size: 12px;
+    }
+    @media ${medias.mobile} {
+      font-size: 12px;
+    }
   }
   body {
     background: ${({ theme }) => theme.body};

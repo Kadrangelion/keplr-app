@@ -24,7 +24,7 @@ export default function useDebounce(value, delay) {
         clearTimeout(handler);
       };
     },
-    // Only re-call effect if value changes
+    // Only re-call effect if value or delay changes
     [value, delay] 
   );
 

@@ -18,6 +18,7 @@ export const InputContainer = styled.div`
   padding: 5px;
   border: 1px solid;
   border-radius: 5px;
+  color: black;
 `;
 
 export const InputClearIcon = styled.div`
