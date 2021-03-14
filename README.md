@@ -25,37 +25,37 @@ The app is ready to be deployed!
 
 # Folder's tree
 
-|-public
-|-src
-| |- components // Here we can find all components global to the app (inputs, layouts ...)
-| | |- Header
-| | | |- index.tsx // Every components folder got this index.tsx where the component is defined
-| | | |_ Header.style.ts // Each component which required some styling will have this style.ts file where styled-components will be use
-| | |- Switch
-| | |- ...
-| | |_ index.ts // In this file we export all our components. this allow cleaner imports in project files
-| |- models // Folder containing all the Interfaces and types need to our project
-| | |- Film.ts // Here we define a Film Interface to be used in project
-| | |- ...
-| | |_ index.ts // In this file we export all our compomodelsnents. this allow cleaner imports in project files
-| |- pages // Folder containing one folder/pages of our app
-| | |- Home
-| | | |- index.tsx // The page definition and logic
-| | | |_ Home.style.ts // Style specific to our page
-| | |- ...
-| | |_ index.ts // In this file we export all our pages. this allow cleaner imports in project files
-| |- services // Folder containing our API calls
-| | |- TMDb.ts // File containing definion for all TMDb calls
-| | |_ ...
-| | |_ index.ts // In this file we export all our services. this allow cleaner imports in project files
-| |- styles // Folder containing global app styles and variables
-| |- utils // Folder containing some usefull librairies and or function which can be called anywhere in project
-| |- App.tsx
-| |- index.tsx
-| |_ ...
-|- .env
-|- .gitignore
-|- package-lock.json
-|- package.json
-|- README.MD
-|\_ tsconfig.json
+├──public\
+├──src\
+│ ├── components // Here we can find all components global to the app (inputs, layouts ...)\
+│ │ ├── Header\
+│ │ │ ├── index.tsx // Every components folder got this index.tsx where the component is defined\
+│ │ │ └── Header.style.ts // Each component which required some styling will have this style.ts file where styled-components will be use\
+│ │ ├── Switch\
+│ │ ├── ...\
+│ │ └── index.ts // In this file we export all our components. this allow cleaner imports in project files\
+│ ├── models // Folder containing all the Interfaces and types need to our project\
+│ │ ├── Film.ts // Here we define a Film Interface to be used in project\
+│ │ ├── ...\
+│ │ └── index.ts // In this file we export all our compomodelsnents. this allow cleaner imports in project files\
+│ ├── pages // Folder containing one folder/pages of our app\
+│ │ ├── Home\
+│ │ │ ├── index.tsx // The page definition and logic\
+│ │ │ └── Home.style.ts // Style specific to our page\
+│ │ ├── ...\
+│ │ └── index.ts // In this file we export all our pages. this allow cleaner imports in project files\
+│ ├── services // Folder containing our API calls\
+│ │ ├── TMDb.ts // File containing definion for all TMDb calls\
+│ │ └── ...\
+│ │ └── index.ts // In this file we export all our services. this allow cleaner imports in project files\
+│ ├── styles // Folder containing global app styles and variables\
+│ ├── utils // Folder containing some usefull librairies and or function which can be called anywhere in project\
+│ ├── App.tsx\
+│ ├── index.tsx\
+│ └── ...\
+├── .env\
+├── .gitignore\
+├── package-lock.json\
+├── package.json\
+├── README.MD\
+└── tsconfig.json
