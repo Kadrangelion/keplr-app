@@ -1,7 +1,8 @@
 import IFilm from './Film';
-import ITMDbFilmsResponse from './TMDbResponse';
+import { ITMDbFilmsResponse, ITMDbFilmDetailResponse } from './TMDbResponse';
 
 export type {
   IFilm,
   ITMDbFilmsResponse,
+  ITMDbFilmDetailResponse
 }

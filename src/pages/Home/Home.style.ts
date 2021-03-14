@@ -1,18 +1,6 @@
 import styled from 'styled-components';
 import { medias } from '../../styles/medias';
-
-export const HomeContainer = styled.div`
-  padding:2%;
-  margin-left:auto;
-  margin-right:auto;
-  width:60%;
-  @media ${medias.tablet} {
-    width: 70%;
-  }
-  @media ${medias.mobile} {
-    width: 80%;
-  }
-`;
+import { Poster } from '../../styles/global';
 
 export const FilmCardContainer = styled.div`
   display: flex;
@@ -20,11 +8,6 @@ export const FilmCardContainer = styled.div`
   flex-direction: row;
 	flex-wrap: wrap;
 	margin-left: -5px;
-`
-
-export const Poster = styled.img`
-  height: auto;
-  width: 100%;
 `;
 
 export const Tooltip = styled.div`

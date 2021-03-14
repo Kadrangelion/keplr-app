@@ -1,15 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { IFilm, ITMDbFilmsResponse } from '../../models';
 import { Searchbar } from '../../components';
-import { HomeContainer, FilmCardContainer, Poster, Tooltip, FilmCard } from './Home.style';
+import { FilmCardContainer, Tooltip, FilmCard } from './Home.style';
+import { PageContainer, Poster } from '../../styles/global';
 import { TMDb } from '../../services';
 import { AxiosResponse } from 'axios';
 
-type HomeProps = {}
-
-const Home: React.FC<HomeProps> = () => {
+const Home= () => {
   const history = useHistory();
   const [filmList, setFilmList] = useState<IFilm[]>([]);
   const [searchValue, setSearchValue] = useState('');
@@ -47,26 +46,23 @@ const Home: React.FC<HomeProps> = () => {
   }
 
   return (
-    <HomeContainer>
+    <PageContainer>
       <Searchbar label='Rechercher un film' onSearch={(newValue: string) => setSearchValue(newValue)} />
       <FilmCardContainer>
         {filmList.length > 0 && filmList.map((film: IFilm) => (
           <FilmCard key={`filmcard_${film.id}`}>
-            <Poster
-              id={`image_${film.id}`}
-              key={`image_${film.id}`}
-              src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-              alt={`${film.title}_image`}
-            />
-            <Tooltip key={`tooltip_${film.id}`}
-              onClick={() => history.push(`/film/${film.id}`)}>
+            <Poster key={film.id} src={`${process.env.REACT_APP_TMDb_IMG_LINK}${film.poster_path}`} alt={film.title} />
+            <Tooltip
+              key={`tooltip_${film.id}`}
+              onClick={() => history.push(`/film/${film.id}`)}
+            >
               {film.title}
             </Tooltip>
           </FilmCard>
           )
         )}
       </FilmCardContainer>
-    </HomeContainer>
+    </PageContainer>
   )
 }
 
