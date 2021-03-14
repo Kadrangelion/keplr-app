@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+# Keplr-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as an answer to a tech test.
+It uses styled-components & typescript
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
@@ -14,33 +15,47 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Folder's tree
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+|-public
+|-src
+| |- components // Here we can find all components global to the app (inputs, layouts ...)
+| | |- Header
+| | | |- index.tsx // Every components folder got this index.tsx where the component is defined
+| | | |_ Header.style.ts // Each component which required some styling will have this style.ts file where styled-components will be use
+| | |- Switch
+| | |- ...
+| | |_ index.ts // In this file we export all our components. this allow cleaner imports in project files
+| |- models // Folder containing all the Interfaces and types need to our project
+| | |- Film.ts // Here we define a Film Interface to be used in project
+| | |- ...
+| | |_ index.ts // In this file we export all our compomodelsnents. this allow cleaner imports in project files
+| |- pages // Folder containing one folder/pages of our app
+| | |- Home
+| | | |- index.tsx // The page definition and logic
+| | | |_ Home.style.ts // Style specific to our page
+| | |- ...
+| | |_ index.ts // In this file we export all our pages. this allow cleaner imports in project files
+| |- services // Folder containing our API calls
+| | |- TMDb.ts // File containing definion for all TMDb calls
+| | |_ ...
+| | |_ index.ts // In this file we export all our services. this allow cleaner imports in project files
+| |- styles // Folder containing global app styles and variables
+| |- utils // Folder containing some usefull librairies and or function which can be called anywhere in project
+| |- App.tsx
+| |- index.tsx
+| |_ ...
+|- .env
+|- .gitignore
+|- package-lock.json
+|- package.json
+|- README.MD
+|\_ tsconfig.json
